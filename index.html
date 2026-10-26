@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080909">
+  <meta name="description"
+        content="CHRONOS — ساعة ذهبية ميكانيكية بتروس وعقارب حية">
+  <title>CHRONOS — Golden Clock</title>
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-icon">✳</span>
+        <div>
+          <div class="brand-name">CHRONOS</div>
+          <div class="brand-subtitle">GOLDEN TIME ENGINE</div>
+        </div>
+      </div>
+      <div class="live-status">
+        <span class="live-dot"></span>
+        <span>توقيت حي</span>
+      </div>
+    </header>
+
+    <section class="clock-section">
+      <div class="heading">
+        <div>
+          <div class="eyebrow">MECHANICAL ART / 001</div>
+          <h1>الساعة الذهبية</h1>
+        </div>
+        <span class="edition">EDITION 01</span>
+      </div>
+
+      <div class="stage">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="clock-face" id="clockFace">
+          <div class="inner-ring"></div>
+          <div class="ticks"></div>
+
+          <div class="numbers" aria-label="أرقام الساعة">
+            <span class="n n12">12</span>
+            <span class="n n1">1</span>
+            <span class="n n2">2</span>
+            <span class="n n3">3</span>
+            <span class="n n4">4</span>
+            <span class="n n5">5</span>
+            <span class="n n6">6</span>
+            <span class="n n7">7</span>
+            <span class="n n8">8</span>
+            <span class="n n9">9</span>
+            <span class="n n10">10</span>
+            <span class="n n11">11</span>
+          </div>
+
+          <div class="gear gear-one" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><use href="#gear"/></svg>
+          </div>
+          <div class="gear gear-two" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><use href="#gear"/></svg>
+          </div>
+          <div class="gear gear-three" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><use href="#gear"/></svg>
+          </div>
+          <div class="gear gear-four" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><use href="#gear"/></svg>
+          </div>
+
+          <div class="emblem" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <path d="M47 44 C27 6 6 17 18 42
+                       C25 56 38 58 46 55
+                       C32 66 34 81 45 88
+                       L50 68 L55 88
+                       C66 81 68 66 54 55
+                       C62 58 75 56 82 42
+                       C94 17 73 6 53 44
+                       L50 63 Z"
+                    fill="currentColor"/>
+              <path d="M50 43 L50 68"
+                    stroke="#fff0bd" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <div class="hand hour-hand" id="hourHand"></div>
+          <div class="hand minute-hand" id="minuteHand"></div>
+          <div class="hand second-hand" id="secondHand"></div>
+          <div class="center-pin"></div>
+          <div class="glass"></div>
+        </div>
+      </div>
+
+      <div class="digital-panel">
+        <div class="digital-clock" dir="ltr">
+          <span class="live-dot"></span>
+          <time id="digitalTime">00:00:00</time>
+        </div>
+        <div class="date" id="dateLabel">—</div>
+      </div>
+
+      <div class="bottom-controls">
+        <button id="motionButton" type="button">
+          <span id="motionIcon">Ⅱ</span>
+          <span id="motionLabel">إيقاف حركة التروس</span>
+        </button>
+        <button id="fullscreenButton" type="button">
+          ⛶ ملء الشاشة
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>CHRONOS STUDIO</span>
+      <span>CRAFTED WITH <b>Othman</b></span>
+    </footer>
+  </main>
+
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true">
+    <defs>
+      <g id="gear" fill="none" stroke="currentColor">
+        <circle cx="50" cy="50" r="34" stroke-width="4"/>
+        <circle cx="50" cy="50" r="24" stroke-width="1.8"/>
+        <circle cx="50" cy="50" r="8" stroke-width="3"/>
+        <path d="M50 3V18 M50 82V97
+                 M3 50H18 M82 50H97
+                 M17 17L28 28 M72 72L83 83
+                 M83 17L72 28 M28 72L17 83
+                 M35 5L39 19 M61 81L65 95
+                 M5 35L19 39 M81 61L95 65
+                 M65 5L61 19 M39 81L35 95
+                 M95 35L81 39 M19 61L5 65"
+              stroke-width="5" stroke-linecap="round"/>
+      </g>
+    </defs>
+  </svg>
+
+  <script src="./script.js"></script>
+</body>
+</html>
